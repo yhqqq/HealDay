@@ -44,6 +44,71 @@
     <!-- END PAGE LEVEL STYLES -->
 
     <link rel="shortcut icon" href="media/image/favicon.ico"/>
+    <style>
+        body{color: #333333;}
+        #container h3{font-family: "Microsoft YaHei";}
+        .heart {
+            background: url(./media/image/web_heart_animation.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            height: 75px;
+            width: 75px;
+            cursor: pointer;
+            position: absolute;
+            left:-14px;
+            background-size:2900%;
+        }
+        .heart:hover, .heart:focus{
+            background-position: right;
+        }
+
+        @-webkit-keyframes heartBlast {
+            0% {
+                background-position: left;
+            }
+            100% {
+                background-position: right;
+            }
+        }
+
+        @keyframes heartBlast {
+            0% {
+                background-position: left;
+            }
+            100% {
+                background-position: right;
+            }
+        }
+
+        .heartAnimation {
+            display: inline-block;
+            -webkit-animation-name: heartBlast;
+            animation-name: heartBlast;
+            -webkit-animation-duration: .8s;
+            animation-duration: .8s;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+            -webkit-animation-timing-function: steps(28);
+            animation-timing-function: steps(28);
+            background-position: right;
+        }
+        .feed p{font-family: "Microsoft YaHei",'Georgia', Times, Times New Roman, serif; font-size: 25px;}
+        .feed{clear: both;
+            margin-bottom: :20px; 
+            height:75px;
+            position: relative;}
+        a{color: #7ac9ed;}
+        p{margin: 0px; padding: 0px;}
+        .likeCount{font-family: 'Georgia', Times, Times New Roman, serif;
+            float: left;
+            width:100px;
+            height:50px;;
+            margin-top: 22px;;
+            margin-left: 50px;
+            font-size: 25px;
+            color: #999999}
+
+    </style>
 </head>
 <body class="page-header-fixed">
 <!-- BEGIN HEADER -->
@@ -280,14 +345,6 @@
 
                     <li>
 
-                        <a href="society_mine.html">
-
-                            我的动态</a>
-
-                    </li>
-
-                    <li>
-
                         <a href="society_new.html">
 
                             发布动态</a>
@@ -439,6 +496,11 @@
                                 <!--</div>-->
 
                             <!--</div>-->
+                            <div class="pull-left">
+
+                                <a href="society_new.html" class="btn icn-only green">发布动态 <i class="m-icon-swapright m-icon-white"></i></a>
+
+                            </div>
 
                             <div class="portlet-body" id="chats">
 
@@ -464,7 +526,17 @@
 													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
 													</span>
-
+                                            </div>
+                                            <div class="feed" id="feed1">
+                                                <div class="heart " id="like1" rel="like"></div>
+                                                <div class="likeCount" id="likeCount1">4</div>
+                                                <div class="reply">
+                                                    <span>123</span>
+                                                </div>
+                                                <div class="input">
+                                                        <input type="text" class="inputText">
+                                                        <button type="submit" onclick="replymessage()">reply</button>
+                                                </div>
                                             </div>
 
                                         </li>
@@ -488,7 +560,16 @@
 													</span>
 
                                             </div>
+                                            <div class="feed">
+                                                <div class="heart " id="like2" rel="like"></div>
+                                                <div class="likeCount" id="likeCount2">12</div>
+                                                <div class="reply"></div>
+                                                <div class="input">
 
+                                                        <input type="text">
+                                                        <input type="submit" value="回复">
+                                                </div>
+                                            </div>
                                         </li>
 
                                         <li class="in">
@@ -510,7 +591,15 @@
 													</span>
 
                                             </div>
-
+                                            <div class="feed">
+                                                <div class="heart " id="like3" rel="like"></div>
+                                                <div class="likeCount" id="likeCount3">23</div>
+                                                <div class="reply"></div>
+                                                <div class="input">
+                                                        <input type="text">
+                                                        <input type="submit" value="回复">
+                                                </div>
+                                            </div>
                                         </li>
 
                                         <li class="in">
@@ -532,7 +621,15 @@
 													</span>
 
                                             </div>
-
+                                            <div class="feed">
+                                                <div class="heart " id="like4" rel="like"></div>
+                                                <div class="likeCount" id="likeCount4">2</div>
+                                                <div class="reply"></div>
+                                                <div class="input">
+                                                        <input type="text">
+                                                        <input type="submit" value="回复">
+                                                </div>
+                                            </div>
                                         </li>
 
                                         <li class="in">
@@ -554,7 +651,17 @@
 													</span>
 
                                             </div>
+                                            <div class="feed">
+                                                <div class="heart " id="like5" rel="like"></div>
+                                                <div class="likeCount" id="likeCount5">8</div>
+                                                <div class="reply">
 
+                                                </div>
+                                                <div class="input">
+                                                        <input type="text">
+                                                        <input type="submit" value="回复">
+                                                </div>
+                                            </div>
                                         </li>
 
                                         <li class="in">
@@ -576,7 +683,15 @@
 													</span>
 
                                             </div>
-
+                                            <div class="feed">
+                                                <div class="heart " id="like6" rel="like"></div>
+                                                <div class="likeCount" id="likeCount6">15</div>
+                                                <div class="reply"></div>
+                                                <div class="input">
+                                                        <input type="text">
+                                                        <input type="submit" value="回复">
+                                                </div>
+                                            </div>
                                         </li>
 
                                         <li class="in">
@@ -600,7 +715,17 @@
 													</span>
 
                                             </div>
-
+                                            <div class="feed">
+                                                <div class="heart " id="7" rel="like"></div>
+                                                <div class="likeCount" id="likeCount7">7</div>
+                                                <div class="reply"></div>
+                                                <div class="input">
+                                                    <form>
+                                                        <input type="text">
+                                                        <input type="submit" value="回复">
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </li>
 
                                         <li class="in">
@@ -622,7 +747,17 @@
 													</span>
 
                                             </div>
-
+                                            <div class="feed">
+                                                <div class="heart " id="like8" rel="like"></div>
+                                                <div class="likeCount" id="likeCount8">4</div>
+                                                <div class="reply"></div>
+                                                <div class="input">
+                                                    <form>
+                                                        <input type="text">
+                                                        <input type="submit" value="回复">
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </li>
 
                                     </ul>
@@ -654,16 +789,6 @@
                         <!-- END PORTLET-->
 
                     </div>
-
-
-
-
-
-
-
-
-
-
 
                 </div>
 
@@ -801,6 +926,50 @@
 
 </script>
 
+<script>
+    $(document).ready(function()
+    {
+
+        $('body').on("click",'.heart',function()
+        {
+
+            var A=$(this).attr("id");
+            var B=A.split("like");
+            var messageID=B[1];
+            var C=parseInt($("#likeCount"+messageID).html());
+            $(this).css("background-position","")
+            var D=$(this).attr("rel");
+
+            if(D === 'like')
+            {
+                $("#likeCount"+messageID).html(C+1);
+                $(this).addClass("heartAnimation").attr("rel","unlike");
+
+            }
+            else
+            {
+                $("#likeCount"+messageID).html(C-1);
+                $(this).removeClass("heartAnimation").attr("rel","like");
+                $(this).css("background-position","left");
+            }
+
+
+        });
+
+
+    });
+</script>
+
+<script>
+    function replymessage(){
+        var feed=$(this).parent().parent();
+        var input=$(this).parent().children("input.inputText");
+        console.log(input.value);
+        var reply=feed.children("div.reply");
+        var txt=$("<span></span>").text(input.value);
+        reply.add(txt);
+    }
+</script>
 <!-- END JAVASCRIPTS -->
 
 <!--<script type="text/javascript">  var _gaq = _gaq || [];-->
