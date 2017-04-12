@@ -27,6 +27,10 @@
 
     <link href="media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
+    <link rel="stylesheet" href="media/css/semantic.css" type="text/css" />
+
+    <link rel="stylesheet" href="media/css/zyComment.css" type="text/css" />
+
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL STYLES -->
@@ -44,70 +48,19 @@
     <!-- END PAGE LEVEL STYLES -->
 
     <link rel="shortcut icon" href="media/image/favicon.ico"/>
-    <style>
-        body{color: #333333;}
-        #container h3{font-family: "Microsoft YaHei";}
-        .heart {
-            background: url(./media/image/web_heart_animation.png);
-            background-position: left;
-            background-repeat: no-repeat;
-            height: 75px;
-            width: 75px;
-            cursor: pointer;
-            position: absolute;
-            left:-14px;
-            background-size:2900%;
-        }
-        .heart:hover, .heart:focus{
-            background-position: right;
+    <style type="text/css" media="print, screen">
+        label {
+            font-weight: bold;
         }
 
-        @-webkit-keyframes heartBlast {
-            0% {
-                background-position: left;
-            }
-            100% {
-                background-position: right;
-            }
+        a {
+            font-family: Microsoft YaHei;
         }
 
-        @keyframes heartBlast {
-            0% {
-                background-position: left;
-            }
-            100% {
-                background-position: right;
-            }
+        #articleComment {
+            width: 600px;
+            margin:0 auto;
         }
-
-        .heartAnimation {
-            display: inline-block;
-            -webkit-animation-name: heartBlast;
-            animation-name: heartBlast;
-            -webkit-animation-duration: .8s;
-            animation-duration: .8s;
-            -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-            -webkit-animation-timing-function: steps(28);
-            animation-timing-function: steps(28);
-            background-position: right;
-        }
-        .feed p{font-family: "Microsoft YaHei",'Georgia', Times, Times New Roman, serif; font-size: 25px;}
-        .feed{clear: both;
-            margin-bottom: :20px; 
-            height:75px;
-            position: relative;}
-        a{color: #7ac9ed;}
-        p{margin: 0px; padding: 0px;}
-        .likeCount{font-family: 'Georgia', Times, Times New Roman, serif;
-            float: left;
-            width:100px;
-            height:50px;;
-            margin-top: 22px;;
-            margin-left: 50px;
-            font-size: 25px;
-            color: #999999}
-
     </style>
 </head>
 <body class="page-header-fixed">
@@ -441,27 +394,6 @@
 
                         <li><a href="#">好友动态</a></li>
 
-
-                        <!--日期选择-->
-
-
-                        <!--<li class="pull-right no-text-shadow">-->
-
-                        <!--<div id="dashboard-report-range"-->
-                        <!--class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive"-->
-                        <!--data-tablet="" data-desktop="tooltips" data-placement="top"-->
-                        <!--data-original-title="Change dashboard date range">-->
-
-                        <!--<i class="icon-calendar"></i>-->
-
-                        <!--<span></span>-->
-
-                        <!--<i class="icon-angle-down"></i>-->
-
-                        <!--</div>-->
-
-                        <!--</li>-->
-
                     </ul>
 
                     <!-- END PAGE TITLE & BREADCRUMB-->
@@ -479,310 +411,47 @@
 
                         <div class="portlet">
 
-                            <!--<div class="portlet-title line">-->
 
-                                <!--<div class="caption"><i class="icon-comments"></i>Chats</div>-->
-
-                                <!--<div class="tools">-->
-
-                                    <!--<a href="" class="collapse"></a>-->
-
-                                    <!--<a href="#portlet-config" data-toggle="modal" class="config"></a>-->
-
-                                    <!--<a href="" class="reload"></a>-->
-
-                                    <!--<a href="" class="remove"></a>-->
-
-                                <!--</div>-->
-
-                            <!--</div>-->
                             <div class="pull-left">
 
                                 <a href="society_new.html" class="btn icn-only green">发布动态 <i class="m-icon-swapright m-icon-white"></i></a>
 
                             </div>
 
-                            <div class="portlet-body" id="chats">
+                            <div id="articleComment"></div>
 
-                                <!--<div class="scroller" data-height="435px" data-always-visible="1"-->
-                                     <!--data-rail-visible1="1">-->
+                            <script type="text/javascript" src="media/js/jquery-1.7.2.min.js"></script>
+                            <script type="text/javascript" src="media/js/zyComment.js"></script>
 
-                                    <ul class="chats">
+                            <script type="text/javascript">
 
-                                        <li class="in">
+                                var agoComment = [
+                                    {"id":1,"userName":"richard","time":"2014-04-04","sortID":0,"content":"i have a pen"},
+                                    {"id":2,"userName":"fox","time":"2014-04-04","sortID":0,"content":"you should eat that"},
+                                    {"id":3,"userName":"站长","time":"2014-04-04","sortID":1,"content":"666"},
+                                    {"id":4,"userName":"站长","time":"2014-04-04","sortID":2,"content":"666"},
+                                    {"id":5,"userName":"kobe","time":"2014-04-04","sortID":0,"content":"i am the best player"},
+                                    {"id":6,"userName":"curry","time":"2014-04-04","sortID":4,"content":"shoot that"},
+                                ];
+                                $("#articleComment").zyComment({
+                                    "width":"355",
+                                    "height":"33",
+                                    "agoComment":agoComment,
+                                    "callback":function(comment){
+                                        console.info("填写内容返回值：");
+                                        console.info(comment);
 
-                                            <img class="avatar" alt="" src="media/image/avatar1.jpg"/>
+                                        // 添加新的评论
+                                        $("#articleComment").zyComment("setCommentAfter",{"id":123, "name":"name", "content":"content", "time":"2014-04-14"});
 
-                                            <div class="message">
+                                    }
+                                });
 
-                                                <span class="arrow"></span>
 
-                                                <a href="#" class="name">Bob Nilson</a>
 
-                                                <span class="datetime">at Jul 25, 2016 11:09</span>
+                            </script>
 
-                                                <span class="body">
-
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-													</span>
-                                            </div>
-                                            <div class="feed" id="feed1">
-                                                <div class="heart " id="like1" rel="like"></div>
-                                                <div class="likeCount" id="likeCount1">4</div>
-                                                <div class="reply">
-                                                    <span>123</span>
-                                                </div>
-                                                <div class="input">
-                                                        <input type="text" class="inputText">
-                                                        <button type="submit" onclick="replymessage()">reply</button>
-                                                </div>
-                                            </div>
-
-                                        </li>
-
-                                        <li class="in">
-
-                                            <img class="avatar" alt="" src="media/image/avatar2.jpg"/>
-
-                                            <div class="message">
-
-                                                <span class="arrow"></span>
-
-                                                <a href="#" class="name">Lisa Wong</a>
-
-                                                <span class="datetime">at Jul 25, 2016 11:09</span>
-
-                                                <span class="body">
-
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-													</span>
-
-                                            </div>
-                                            <div class="feed">
-                                                <div class="heart " id="like2" rel="like"></div>
-                                                <div class="likeCount" id="likeCount2">12</div>
-                                                <div class="reply"></div>
-                                                <div class="input">
-
-                                                        <input type="text">
-                                                        <input type="submit" value="回复">
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="in">
-
-                                            <img class="avatar" alt="" src="media/image/avatar1.jpg"/>
-
-                                            <div class="message">
-
-                                                <span class="arrow"></span>
-
-                                                <a href="#" class="name">Bob Nilson</a>
-
-                                                <span class="datetime">at Jul 25, 2016 11:09</span>
-
-                                                <span class="body">
-
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-													</span>
-
-                                            </div>
-                                            <div class="feed">
-                                                <div class="heart " id="like3" rel="like"></div>
-                                                <div class="likeCount" id="likeCount3">23</div>
-                                                <div class="reply"></div>
-                                                <div class="input">
-                                                        <input type="text">
-                                                        <input type="submit" value="回复">
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="in">
-
-                                            <img class="avatar" alt="" src="media/image/avatar3.jpg"/>
-
-                                            <div class="message">
-
-                                                <span class="arrow"></span>
-
-                                                <a href="#" class="name">Richard Doe</a>
-
-                                                <span class="datetime">at Jul 25, 2016 11:09</span>
-
-                                                <span class="body">
-
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-													</span>
-
-                                            </div>
-                                            <div class="feed">
-                                                <div class="heart " id="like4" rel="like"></div>
-                                                <div class="likeCount" id="likeCount4">2</div>
-                                                <div class="reply"></div>
-                                                <div class="input">
-                                                        <input type="text">
-                                                        <input type="submit" value="回复">
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="in">
-
-                                            <img class="avatar" alt="" src="media/image/avatar3.jpg"/>
-
-                                            <div class="message">
-
-                                                <span class="arrow"></span>
-
-                                                <a href="#" class="name">Richard Doe</a>
-
-                                                <span class="datetime">at Jul 25, 2016 11:09</span>
-
-                                                <span class="body">
-
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-													</span>
-
-                                            </div>
-                                            <div class="feed">
-                                                <div class="heart " id="like5" rel="like"></div>
-                                                <div class="likeCount" id="likeCount5">8</div>
-                                                <div class="reply">
-
-                                                </div>
-                                                <div class="input">
-                                                        <input type="text">
-                                                        <input type="submit" value="回复">
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="in">
-
-                                            <img class="avatar" alt="" src="media/image/avatar1.jpg"/>
-
-                                            <div class="message">
-
-                                                <span class="arrow"></span>
-
-                                                <a href="#" class="name">Bob Nilson</a>
-
-                                                <span class="datetime">at Jul 25, 2016 11:09</span>
-
-                                                <span class="body">
-
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-													</span>
-
-                                            </div>
-                                            <div class="feed">
-                                                <div class="heart " id="like6" rel="like"></div>
-                                                <div class="likeCount" id="likeCount6">15</div>
-                                                <div class="reply"></div>
-                                                <div class="input">
-                                                        <input type="text">
-                                                        <input type="submit" value="回复">
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="in">
-
-                                            <img class="avatar" alt="" src="media/image/avatar3.jpg"/>
-
-                                            <div class="message">
-
-                                                <span class="arrow"></span>
-
-                                                <a href="#" class="name">Richard Doe</a>
-
-                                                <span class="datetime">at Jul 25, 2016 11:09</span>
-
-                                                <span class="body">
-
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-
-													sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-													</span>
-
-                                            </div>
-                                            <div class="feed">
-                                                <div class="heart " id="7" rel="like"></div>
-                                                <div class="likeCount" id="likeCount7">7</div>
-                                                <div class="reply"></div>
-                                                <div class="input">
-                                                    <form>
-                                                        <input type="text">
-                                                        <input type="submit" value="回复">
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="in">
-
-                                            <img class="avatar" alt="" src="media/image/avatar1.jpg"/>
-
-                                            <div class="message">
-
-                                                <span class="arrow"></span>
-
-                                                <a href="#" class="name">Bob Nilson</a>
-
-                                                <span class="datetime">at Jul 25, 2016 11:09</span>
-
-                                                <span class="body">
-
-													Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. sed diam nonummy nibh euismod tincidunt ut laoreet.
-
-													</span>
-
-                                            </div>
-                                            <div class="feed">
-                                                <div class="heart " id="like8" rel="like"></div>
-                                                <div class="likeCount" id="likeCount8">4</div>
-                                                <div class="reply"></div>
-                                                <div class="input">
-                                                    <form>
-                                                        <input type="text">
-                                                        <input type="submit" value="回复">
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-
-                                <!--</div>-->
-
-                                <!--<div class="chat-form">-->
-
-                                    <!--<div class="input-cont">-->
-
-                                        <!--<input class="m-wrap" type="text" placeholder="Type a message here..."/>-->
-
-                                    <!--</div>-->
-
-                                    <!--<div class="btn-cont">-->
-
-                                        <!--<span class="arrow"></span>-->
-
-                                        <!--<a href="" class="btn blue icn-only"><i class="icon-ok icon-white"></i></a>-->
-
-                                    <!--</div>-->
-
-                                <!--</div>-->
-
-                            </div>
+                            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
 
                         </div>
 
@@ -960,16 +629,6 @@
     });
 </script>
 
-<script>
-    function replymessage(){
-        var feed=$(this).parent().parent();
-        var input=$(this).parent().children("input.inputText");
-        console.log(input.value);
-        var reply=feed.children("div.reply");
-        var txt=$("<span></span>").text(input.value);
-        reply.add(txt);
-    }
-</script>
 <!-- END JAVASCRIPTS -->
 
 <!--<script type="text/javascript">  var _gaq = _gaq || [];-->
