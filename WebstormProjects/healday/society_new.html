@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HealDay</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+    <meta content="" name="description"/>
+
+    <meta content="" name="author"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+    <link href="media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+
+    <link href="media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+    <link href="media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+
+    <link rel="stylesheet" type="text/css" href="media/css/bootstrap-fileupload.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/jquery.gritter.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/chosen.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/select2_metro.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/jquery.tagsinput.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/clockface.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/bootstrap-wysihtml5.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/datepicker.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/timepicker.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/colorpicker.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/bootstrap-toggle-buttons.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/daterangepicker.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/datetimepicker.css" />
+
+    <link rel="stylesheet" type="text/css" href="media/css/multi-select-metro.css" />
+
+    <link href="media/css/bootstrap-modal.css" rel="stylesheet" type="text/css"/>
+
+    <!-- END PAGE LEVEL STYLES -->
+
+    <link rel="shortcut icon" href="media/image/favicon.ico" />
+</head>
+
+<body class="page-header-fixed">
+<!-- BEGIN HEADER -->
+
+<div class="header navbar navbar-inverse navbar-fixed-top">
+    <!-- BEGIN TOP NAVIGATION BAR -->
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <!-- BEGIN LOGO -->
+            <a class="brand" href="index.html">
+                <!--<img src="media/image/logo.png" alt="logo"/>-->
+                <p> HealDay</p>
+
+            </a>
+            <!-- END LOGO -->
+
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                <img src="media/image/menu-toggler.png" alt=""/>
+            </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+
+
+            <!-- BEGIN TOP NAVIGATION MENU -->
+            <ul class="nav pull-right">
+
+                <!-- BEGIN USER LOGIN DROPDOWN -->
+
+                <li class="dropdown user">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img alt="" src="media/image/avatar1_small.jpg"/>
+                        <span class="username">yhqqq</span>
+                        <i class="icon-angle-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li><a href="user_profile.html"><i class="icon-user"></i> 我的资料</a></li>
+                        <li><a href="user_settings.html"><i class="icon-user"></i> 个人设置</a></li>
+                        <li><a href="login.html"><i class="icon-user"></i> 切换账户</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="icon-user"></i> 退出登录</a></li>
+
+                    </ul>
+
+                </li>
+
+                <!-- END USER LOGIN DROPDOWN -->
+
+            </ul>
+
+            <!-- END TOP NAVIGATION MENU -->
+
+        </div>
+
+    </div>
+
+    <!-- END TOP NAVIGATION BAR -->
+
+</div>
+
+<!-- END HEADER -->
+
+
+<div class="page-container">
+
+    <!-- BEGIN SIDEBAR -->
+
+    <div class="page-sidebar nav-collapse collapse">
+
+        <!-- BEGIN SIDEBAR MENU -->
+
+        <ul class="page-sidebar-menu">
+
+            <!--收缩条-->
+            <li>
+
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+                <div class="sidebar-toggler hidden-phone"></div>
+
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+            </li>
+
+            <!--我的运动-->
+            <li class="">
+
+                <a href="javascript:;">
+
+                    <i class="icon-map-marker"></i>
+
+                    <span class="title">我的运动</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li>
+
+                        <a href="index.html">
+
+                            今日运动</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="sports_analysis.html">
+
+                            健康分析</a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <!--活动-->
+            <li class="">
+
+                <a href="javascript:;">
+
+                    <i class="icon-table"></i>
+
+                    <span class="title">活动管理</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li>
+
+                        <a href="activity.html">
+
+                            最新活动</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="activity_launch.html">
+
+                            我发起的活动</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="activity_participate.html">
+
+                            我参与的活动</a>
+
+                    </li>
+                    <li>
+
+                        <a href="activity_new.html">
+
+                            发起活动</a>
+
+                    </li>
+                    <li>
+
+                        <a href="activity_history.html">
+
+                            我的活动历史</a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+            <!--我的好友-->
+            <li class="">
+
+                <a href="javascript:;">
+
+                    <i class="icon-user"></i>
+
+                    <span class="title">好友管理</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li>
+
+                        <a href="friends.html">
+
+                            我的好友</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="friends_new.html">
+
+                            添加好友</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="friends_black.html">
+
+                            黑名单</a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+            <!--朋友圈-->
+            <li class="start active ">
+
+                <a href="javascript:;">
+
+                    <i class="icon-th"></i>
+
+                    <span class="title">朋友圈</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li>
+
+                        <a href="society.html">
+
+                            好友动态</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="society_mine.html">
+
+                            我的动态</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="society_new.html">
+
+                            发布动态</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="socitey_settings.html">
+
+                            权限设置</a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+            <!--用户设置-->
+            <li class="">
+
+                <a href="javascript:;">
+
+                    <i class="icon-cogs"></i>
+
+                    <span class="title">用户设置</span>
+
+                    <span class="arrow "></span>
+
+                </a>
+
+                <ul class="sub-menu">
+
+                    <li>
+
+                        <a href="user_profile.html">
+
+                            个人信息</a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="user_settings.html">
+
+                            账户设置</a>
+
+                    </li>
+                </ul>
+
+            </li>
+
+
+        </ul>
+
+        <!-- END SIDEBAR MENU -->
+
+    </div>
+
+    <!-- END SIDEBAR -->
+
+    <!-- BEGIN PAGE CONTAINER-->
+
+    <div class="page-content">
+
+        <div class="container-fluid">
+
+            <!-- BEGIN PAGE HEADER-->
+
+            <div class="row-fluid">
+
+                <div class="span12">
+                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+
+                    <h3 class="page-title">
+
+                        HealDay
+                        <small>For healthy life</small>
+
+                    </h3>
+
+                    <ul class="breadcrumb">
+
+                        <li>
+
+                            <i class="icon-home"></i>
+
+                            <a href="society.html">朋友圈</a>
+
+                            <i class="icon-angle-right"></i>
+
+                        </li>
+
+                        <li><a href="#">发布动态</a></li>
+
+
+                        <!--日期选择-->
+
+
+                        <!--<li class="pull-right no-text-shadow">-->
+
+                        <!--<div id="dashboard-report-range"-->
+                        <!--class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive"-->
+                        <!--data-tablet="" data-desktop="tooltips" data-placement="top"-->
+                        <!--data-original-title="Change dashboard date range">-->
+
+                        <!--<i class="icon-calendar"></i>-->
+
+                        <!--<span></span>-->
+
+                        <!--<i class="icon-angle-down"></i>-->
+
+                        <!--</div>-->
+
+                        <!--</li>-->
+
+                    </ul>
+
+                    <!-- END PAGE TITLE & BREADCRUMB-->
+                </div>
+
+            </div>
+
+            <div class="row-fluid">
+
+                <div class="span12">
+
+                    <!-- BEGIN SAMPLE FORM PORTLET-->
+
+                    <div class="portlet box blue">
+
+                        <div class="portlet-title">
+
+                            <div class="caption"><i class="icon-reorder"></i>发布动态</div>
+
+                        </div>
+
+                        <div class="portlet-body form">
+
+                            <!-- BEGIN FORM-->
+                            <!--上传图片-->
+                            <form action="#" class="form-horizontal">
+
+                                <div class="control-group">
+
+                                    <label class="control-label">上传图片</label>
+
+                                    <div class="controls">
+
+                                        <div class="fileupload fileupload-new" data-provides="fileupload">
+
+                                            <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+
+                                                <img src="media/image/AAAAAA&amp;text=no+image" alt="" />
+
+                                            </div>
+
+                                            <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+
+                                            <div>
+
+													<span class="btn btn-file"><span class="fileupload-new">选择图片</span>
+
+													<span class="fileupload-exists">Change</span>
+
+													<input type="file" class="default" /></span>
+
+                                                <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">移除</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+
+                            <!--文字区域-->
+                            <form action="#" class="form-horizontal">
+
+                                <div class="control-group">
+
+                                    <label class="control-label">输入文字</label>
+
+                                    <div class="controls">
+
+                                        <textarea class="span10 m-wrap" rows="3"></textarea>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-actions">
+
+                                    <button type="submit" class="btn blue">上传</button>
+
+                                    <button type="button" class="btn">取消</button>
+
+                                </div>
+
+                            </form>
+
+                            <!-- END FORM-->
+
+
+
+                        </div>
+
+                    </div>
+
+                    <!-- END SAMPLE FORM PORTLET-->
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<!-- BEGIN FOOTER -->
+
+<div class="footer">
+
+    <div class="footer-inner">
+
+        2016 &copy; HealDay by yhq.
+
+    </div>
+
+    <div class="footer-tools">
+
+			<span class="go-top">
+
+			<i class="icon-angle-up"></i>
+
+			</span>
+
+    </div>
+
+</div>
+
+<!-- END FOOTER -->
+
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+<!-- BEGIN CORE PLUGINS -->
+
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+<script src="media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
+<script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+
+<script src="media/js/excanvas.min.js"></script>
+
+<script src="media/js/respond.min.js"></script>
+
+<![endif]-->
+
+<script src="media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.blockui.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.uniform.min.js" type="text/javascript"></script>
+
+<!-- END CORE PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+<script src="media/js/jquery.vmap.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.vmap.russia.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.vmap.world.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.vmap.europe.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.vmap.germany.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.vmap.usa.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.vmap.sampledata.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.flot.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.flot.resize.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.pulsate.min.js" type="text/javascript"></script>
+
+<script src="media/js/date.js" type="text/javascript"></script>
+
+<script src="media/js/daterangepicker.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.gritter.js" type="text/javascript"></script>
+
+<script src="media/js/fullcalendar.min.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.easy-pie-chart.js" type="text/javascript"></script>
+
+<script src="media/js/jquery.sparkline.min.js" type="text/javascript"></script>
+
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+<script src="media/js/app.js" type="text/javascript"></script>
+
+<script src="media/js/index.js" type="text/javascript"></script>
+
+<!-- END PAGE LEVEL SCRIPTS -->
+
+<script>
+
+    jQuery(document).ready(function () {
+
+        App.init(); // initlayout and core plugins
+
+        Index.init();
+
+        Index.initJQVMAP(); // init index page's custom scripts
+
+        Index.initCalendar(); // init index page's custom scripts
+
+        Index.initCharts(); // init index page's custom scripts
+
+        Index.initChat();
+
+        Index.initMiniCharts();
+
+        Index.initDashboardDaterange();
+
+        Index.initIntro();
+
+    });
+
+</script>
+
+<!-- END JAVASCRIPTS -->
+
+<!--<script type="text/javascript">  var _gaq = _gaq || [];-->
+<!--_gaq.push(['_setAccount', 'UA-37564768-1']);-->
+<!--_gaq.push(['_setDomainName', 'keenthemes.com']);-->
+<!--_gaq.push(['_setAllowLinker', true]);-->
+<!--_gaq.push(['_trackPageview']);-->
+<!--(function () {-->
+<!--var ga = document.createElement('script');-->
+<!--ga.type = 'text/javascript';-->
+<!--ga.async = true;-->
+<!--ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';-->
+<!--var s = document.getElementsByTagName('script')[0];-->
+<!--s.parentNode.insertBefore(ga, s);-->
+<!--})();</script>-->
+</body>
+
+
+</html>

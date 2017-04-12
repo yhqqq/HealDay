@@ -1,0 +1,34 @@
+.touxiang {
+    height: 40px;
+    width: 40px;
+    /*padding-top: 5px;*/
+    /*margin: 5px;*/
+    float: right;
+
+}
+.dropdown{
+    margin: 0px;
+}
+.datouxiang {
+    height: 130px;
+    width: 130px;
+    margin:10%;
+    border: #000000 5px solid;
+}
+
+.nav .nav-pills {
+
+}
+
+.row {
+    height: 50px;
+    padding: 5px;
+}
+
+.healday {
+    margin-top: 5px;
+}
+
+.mypiciture {
+    margin: 30px;
+}
