@@ -224,13 +224,6 @@
 
                     </li>
 
-                    <li>
-
-                        <a href="activity_launch.html">
-
-                            我发起的活动</a>
-
-                    </li>
 
                     <li>
 
@@ -244,13 +237,6 @@
                         <a href="activity_new.html">
 
                             发起活动</a>
-
-                    </li>
-                    <li>
-
-                        <a href="activity_history.html">
-
-                            我的活动历史</a>
 
                     </li>
 
@@ -569,7 +555,9 @@
 
                                 <div class="span2 portfolio-btn">
 
-                                    <a href="#" class="btn bigicn-only"><span>加入！</span></a>
+                                    <!--<a href="#" class="btn bigicn-only"><span>加入</span></a>-->
+                                    <a href="#" class="btn btn-danger"><span>加入</span></a>
+
 
                                 </div>
 
@@ -623,7 +611,7 @@
 
                                 <div class="span2 portfolio-btn">
 
-                                    <a href="#" class="btn bigicn-only"><span>管理</span></a>
+                                    <a href="activity_manage.html" class="btn bigicn-only"><span>管理</span></a>
 
                                 </div>
 
@@ -686,18 +674,17 @@
                             <!--end row-fluid-->
 
                             <!--页码-->
-                            <div class="pagination pagination-right">
-
+                            <div class="dataTables_paginate paging_bootstrap pagination">
                                 <ul>
-
-                                    <li><a href="#">Prev</a></li>
-
+                                    <li class="prev disabled"><a href="#">← <span class="hidden-480">Prev</span></a>
+                                    </li>
                                     <li class="active"><a href="#">1</a></li>
-
-                                    <li><a href="#">Next</a></li>
-
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="next"><a href="#"><span class="hidden-480">Next</span> → </a></li>
                                 </ul>
-
                             </div>
 
 
@@ -866,8 +853,8 @@ _gaq.push(['_trackPageview']);
 })();</script>
 
 <script>
-    var actilist=document.querySelectorAll('.row-fluid.portfolio-block');
-    window.onload=function () {
+    var actilist = document.querySelectorAll('.row-fluid.portfolio-block');
+    window.onload = function () {
         $(actilist[1]).show();
         $(actilist[2]).show();
     };
@@ -877,7 +864,6 @@ _gaq.push(['_trackPageview']);
         $(actilist[1]).hide();
         $(actilist[2]).hide();
     });
-
 
 
 </script>
