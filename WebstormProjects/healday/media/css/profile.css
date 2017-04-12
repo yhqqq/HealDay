@@ -284,12 +284,14 @@ Profile Page
 .portfolio-btn a {
   display:block;
   padding:28px 0;
-  background:#ddd !important;
-}
-
-.portfolio-btn a:hover {
   background:#1d943b !important;
 }
+
+/*.portfolio-btn a:hover {*/
+  /*background:#1d943b !important;*/
+/*}*/
+
+
 
 .portfolio-btn span {
   color:#fff;
