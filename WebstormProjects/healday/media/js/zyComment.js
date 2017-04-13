@@ -102,7 +102,7 @@
 			this.createFormCommentHtml = function(){
 				// 先添加父容器
 				$(self).append('<div id="commentFrom"></div>');
-				
+
 				// 组织发表评论的form html代码
 				var boxHtml = '';
 				boxHtml += '<form id="replyBoxAri" class="ui reply form">';
@@ -116,9 +116,9 @@
 				boxHtml += '		</div>';
 				boxHtml += '	</div>';
 				boxHtml += '</form>';
-				
-				$("#commentFrom").append(boxHtml);
-				
+
+				//$("#commentFrom").append(boxHtml);
+
 	            // 初始化html之后绑定点击事件
 	            this.addEvent();
 			};
@@ -191,7 +191,7 @@
 					self.removeAllCommentFrom();
 					
 					// 3.添加根下的回复框
-					self.addRootCommentFrom();
+					//self.addRootCommentFrom();
 				});
 			};
 			
