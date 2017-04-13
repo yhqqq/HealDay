@@ -28,6 +28,12 @@
     <link href="media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
     <!-- END GLOBAL MANDATORY STYLES -->
+    <!--new-->
+    <link href="media/newcss/base.css" rel="stylesheet" type="text/css">
+
+    <link href="media/newcss/home.css" rel="stylesheet" type="text/css">
+
+    <link href="media/newcss/analysis.css" rel="stylesheet" type="text/css">
 
     <!-- BEGIN PAGE LEVEL STYLES -->
 
@@ -419,69 +425,100 @@
                 <div class="row-fluid">
 
                     <!--折线图-->
-                    <div class="span6">
 
-                    <!-- BEGIN PORTLET-->
+                    <div class="span10" style="margin-left: 80px">
 
-                    <div class="portlet solid bordered light-grey">
+                        <!-- BEGIN PORTLET-->
 
-                    <div class="portlet-title">
+                        <div class="my_bmi">
+                            <div class="my_bmi_ipt">
+                                <div class="my_bmi_title"><h1>免费计算你的身体质量指数 (BMI)</h1></div>
+                                <div class="bmi_result tmp"><p class="bmi_info"> &nbsp;
+                                    <img src="http://image.onlinebmicalculator.com/arrow.png" width="24" height="20" border="0" align="absmiddle"> &nbsp; 你的 BMI 值: <span class="bmi_val bmi_val_warning">18.0</span>，身体状态：偏瘦</p></div>
+                                <form>
+                                    <div class="div_tbl">
+                                        <div class="col msg first">度量单位:</div>
+                                        <div class="col ctrl">
+                                            <div class="box">
+                                                <input type="radio" name="f_units" value="units_is" id="f_units_is" checked OnClick="Unit('单位: 厘米 cm', '单位: 千克 kg');">
+                                                <label1 for="f_units_is">公制</label1>
+                                                &nbsp;
+                                                <input type="radio" name="f_units" value="units_us" id="f_units_us"  OnClick="Unit('单位: 英寸 in', '单位: 磅 lb');">
+                                                <label1 for="f_units_us"> 英制</label1>
+                                            </div>
+                                        </div>
+                                        <div class="col msg">我的身高<span id="id_height_unit1" class="for_mobible_span"></span>:</div><div class="col ctrl"><div class="box"><input type=text size=6 name="f_height" value=""><span id="id_height_unit2" class="for_desktop">单位: 厘米 cm</span></div></div>
+                                        <div class="col msg">我的体重<span id="id_weight_unit1" class="for_mobible_span"></span>:</div><div class="col ctrl"><div class="box"><input type=text size=6 name="f_weight" value=""><span id="id_weight_unit2" class="for_desktop">单位: 千克 kg</span></div></div>
+                                        <div class="col msg">BMI 标准:</div><div class="col ctrl"><select id="f_def" name="f_def">
+                                        <option value="def_international">国际标准</option>
+                                        <option value="def_chinese" selected="selected">中国标准</option>
+                                        <option value="def_japanese">日本标准</option>
+                                        <option value="def_singapore">新加坡标准</option>
+                                    </select> </div>
+                                        <div class="col empty"></div><div class="col ctrl"><input type="checkbox" name="f_autosave" value="1"  checked> 自动保存 BMI 历史记录</div>
+                                        <div class="col empty"></div><div class="col ctrl tmp1"><input style="width: 200px" type="button" value="计算 BMI" title="计算 BMI" name="f_submit"/></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </form>
+                            </div>
 
-                    <div class="caption"><i class="icon-bar-chart"></i>Site Visits</div>
+                            <div class="my_bmi_def">
+                                <div class="my_bmi_title"><h2 class="h2_bmi">BMI 中国标准</h2></div>
+                                <table><thead><tr><th class="arrow"></th><th>分类</th><th>BMI 范围</th></tr></thead><tbody><tr><td class="arrow"><div class="tmp"><img src="http://image.onlinebmicalculator.com/arrow.png" width="24" height="20" border="0" align="absmiddle" alt="=>"></div></td><td bgcolor="#CCCCCC">偏瘦</td><td bgcolor="#CCCCCC">&lt;= 18.4</td></tr>
+                                <tr><td class="arrow"></td><td bgcolor="#66cc00">正常</td><td bgcolor="#66cc00">18.5 ~ 23.9</td></tr>
+                                <tr><td class="arrow"></td><td bgcolor="#ffff00">过重</td><td bgcolor="#ffff00">24.0 ~ 27.9</td></tr>
+                                <tr><td class="arrow"></td><td bgcolor="#ff9900">肥胖</td><td bgcolor="#ff9900">&gt;= 28.0</td></tr>
+                                </tbody></table>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="my_history" style="text-align: center">
+                            <div class="my_bmi_title"><h2>我的 BMI 历史记录</h2></div>
+                            <table width=99% border=0 cellpadding=3 cellspacing=1 class=DarkLines>
+                                <tr class=FieldTitle>
+                                    <td>#</td>
+                                    <td>日期</td>
+                                    <td>身高</td>
+                                    <td>体重</td>
+                                    <td>BMI</td>
+                                </tr>
+                                <tr class="FieldBody">
+                                    <td>1</td>
+                                    <td>2017-04-02</td>
+                                    <td>175 cm</td>
+                                    <td>65.0 kg</td>
+                                    <td>21.2</td>
+                                </tr>
+                                <tr class="FieldBody">
+                                    <td>2</td>
+                                    <td>2017-04-04</td>
+                                    <td>175 cm</td>
+                                    <td>64.0 kg</td>
+                                    <td>20.9</td>
 
-                    <div class="tools">
+                                </tr>
+                                <tr class="FieldBody">
+                                    <td>3</td>
+                                    <td>2017-04-10</td>
+                                    <td>175 cm</td>
+                                    <td>60.0 kg</td>
+                                    <td>19.6</td>
 
-                    <div class="btn-group pull-right" data-toggle="buttons-radio">
+                                </tr>
+                                <tr class="FieldBody">
+                                    <td>4</td>
+                                    <td>2017-04-12</td>
+                                    <td>175 cm</td>
+                                    <td>61.0 kg</td>
+                                    <td>19.9</td>
 
-                    <a href="" class="btn mini">Users</a>
+                                </tr>
+                            </table><p class="note">提示: 浏览器的 Cookie 和 JavaScript 必须启用. &nbsp; </p></div>
 
-                    <a href="" class="btn mini active">Feedbacks</a>
+
+                        <!-- END PORTLET-->
 
                     </div>
-
-                    </div>
-
-                    </div>
-
-                    <div class="portlet-body">
-
-                    <div id="site_statistics_loading">
-
-                    <img src="media/image/loading.gif" alt="loading"/>
-
-                    </div>
-
-                    <div id="site_statistics_content" class="hide">
-
-                    <div id="site_statistics" class="chart"></div>
-
-                    </div>
-
-                    </div>
-
-                    </div>
-
-                    <!-- END PORTLET-->
-
-                    </div>
-
-
-                    <!--折线图-->
-
-                    <!--<div class="form-horizontal">-->
-                            <!--<div class="control-group">-->
-                                <!--<label class="control-label"><strong>今日运动</strong></label>-->
-                                <!--<div class="controls">-->
-                                    <!--<input type="text" placeholder="6000" class="m-wrap small"/>-->
-                                    <!--<span class="help-inline"></span>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                    <!--</div>-->
-
-                    <!--<div id="body_chart" class="form-horizontal" style="height: 300px">-->
-
-                    <!--</div>-->
 
 
                 </div>
@@ -593,6 +630,23 @@
 <script src="media/js/index.js" type="text/javascript"></script>
 
 <!-- END PAGE LEVEL SCRIPTS -->
+
+<script>
+
+    var list=document.querySelectorAll('.tmp');
+    window.onload = function () {
+        $(list[0]).hide();
+        $(list[1]).hide();
+
+
+    };
+    $(".tmp1").on("click", function () {
+        $(list[0]).show();
+        $(list[1]).show();
+    });
+
+
+</script>
 
 <script>
 

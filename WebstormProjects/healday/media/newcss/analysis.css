@@ -1,0 +1,195 @@
+body{text-align:center; margin:0px;padding:0px;font-size: 63%;font-family: "Segoe UI", verdana,arial,sans-serif,"微软雅黑","宋体";}
+div,p,td,th,ul,li,ol{}
+h1{font-size:1.8em;line-height:160%;padding:0px;margin:0px;text-align:left}
+h2 {font-size:1.4em;line-height:160%;padding:0px;margin:0px;text-align:left;}
+.h2_bmi{font-size:1.4em;line-height:180%;font-style:normal;padding:0px;margin:0px;}
+hr{height:0px;border:solid #ddd 0px;border-top-width:1px}
+a.external {background: url(http://image.onlinebmicalculator.com/external.png) center right no-repeat;padding-right: 13px}
+.clear{clear:both}
+
+/*lang*/
+.full_line{width:100%;margin:0px auto;padding:0px;border-bottom: 1px solid #e7e7fe;outline: 0px;
+    -webkit-box-shadow: 0 4px 0 0 rgba(255,255,255,.06) inset,0 2px 3px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: 0 4px 0 0 rgba(255,255,255,.06) inset,0 2px 3px 0 rgba(0,0,0,.1);
+    box-shadow: 0 4px 0 0 rgba(255,255,255,.06) inset,0 2px 3px 0 rgba(0,0,0,.1);}
+.full_top{background:#8DD8F8;margin:0px;padding:0px;width:100%;
+    border-bottom: 1px solid #ffffff;
+    background: #f0f0f0;
+    background-image: -ms-linear-gradient (top,#8DD8F8 0%,#F4FAFD 100%);
+    background-image: -moz-linear-gradient (top,#8DD8F8 0%,#F4FAFD 100%);
+    background-image: -o-linear-gradient (top,#8DD8F8 0%,#F4FAFD 100%);
+    background-image: -webkit-linear-gradient(top,#8DD8F8 0%,#F4FAFD 100%);
+    background-image: linear-gradient(to bottom, #8DD8F8 0%,#F4FAFD 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#8DD8F8),color-stop(1,#F4FAFD));
+    filter: progid:DXImageTransform.Microsoft.Gradient( gradientType=0,startColorStr=#8DD8F8,endColorStr=#F4FAFD);
+}
+.full_top #lang{color:#555;padding:0px;margin:0px auto;padding-top:5px;text-align:right;font-size:1.2em;line-height:150%;width:900px;}
+.full_top #lang a{padding: 0px 2px}
+
+/*head*/
+#bt{margin:0px auto; text-align:center; border:0px;width:900px}
+#head {height:135px;padding:0px 0px 0px 0px;color:#333;text-align:center;width:900px;margin:0px auto;}
+#head_l{margin:0px;padding:0px;width:220px;height:135px;overflow:hidden;float:left;}
+#head_l #head_logo{padding:0px}
+#head_r{margin:0px;padding:0px;margin-left:230px;height:135px;overflow:hidden;text-align:left;color:#ddd;}
+#head_r #head_title{padding-right:10px;}
+#head_r .title{font-size:2em;color:#444;Text-Decoration:none;margin:0px;padding-top:15px;}
+#head_r .desc{color:#666;padding-top:10px;margin:0px;font-size:1.2em;line-height:160%;text-align:left}
+
+/*menu*/
+.full{margin:10px 0px;padding:0px;}
+.menu{width:100%;padding:0px 4px 0px 4px;text-align:right;color:#404040}
+.menu A{font-size:12px;color:#404040;Text-Decoration:none}
+.menu A:hover{color:#0000ff;Text-Decoration:underline}
+#link_1{}
+#link_1 IMG{max-width:99%;margin:0px auto;height:auto}
+
+/*ad zone*/
+.azone{text-align:center;margin:20px auto}
+.ad_top_wrapper{width:auto;height:92px;overflow:hidden;}
+.ad_top{width:728px;height:90px;text-align:center;margin:0px;float:left}
+.ad_fch{width:168px;height:90px;margin:0px;float:right;background: url(http://bibipipi.com/futaobao.png) center left no-repeat}
+
+/*BMI Input area*/
+
+
+.my_bmi{margin:10px 0px 10px 0px}
+.my_bmi_ipt{float:left;width:500px}
+.my_bmi_def{float:right;width:350px}
+.my_bmi_def H2{padding-left:34px}
+.my_bmi_def table{border-spacing:0px;border-collapse: separate;width:100%;border:0px;}
+.my_bmi_def td,
+.my_bmi_def TH{font-size:1.4em;line-height:180%}
+.my_bmi_def TH{font-weight:bold;background-color:#8DD8F8;}
+.my_bmi_def .arrow{width:32px;background:#fff}
+
+.my_bmi_title{height:30px;margin-bottom:10px;}
+.bmi_result{border:1px dotted #ddd;background-color:#ffa;margin: 10px 0px 15px 0px;padding:2px;text-align:left}
+.bmi_info{font-size:1.6em;line-height:180%;text-align:left;margin:5px 0px;padding:0px;}
+.bmi_val{font-weight:bold;}
+.bmi_val_normal{color:#390}
+.bmi_val_warning{color:#ff0000}
+
+/*Bmi History*/
+.my_history{margin:20px 0px 20px 0px}
+.my_history table{border-spacing: 1px;border-collapse: separate;width:99%;margin:0px auto;}
+.my_history TD{font-size:1.2em;line-height:180%}
+.bmi_history_img{margin:0px auto}
+#bmi_history_js{width:100%;height:480px}
+.nodata{padding:10px;line-height:180%;font-size:1.2em}
+
+/* forms */
+form {margin: 0;outline: none}
+input[type="text"],textarea{background:#eff8ff;border:1px solid #999}
+.DarkLines{background-color:#7CB5EC}
+.FieldTitle{background-color:#7CB5EC;color:#fff;vertical-align:middle;text-align:center;padding:0px}
+.FieldBody{background-color:#fff;color:#000;padding:0px}
+.ctrl input:focus,
+.ctrl textarea:focus{background: #fffeec;border:2px solid #73A6FF;	}
+input[type="text"],
+input[type="password"],
+textarea,
+select{background:#eff8ff;border:1px solid #999;	font-size:1.2em;line-height:1.6em;}
+input[type="submit"],
+input[type="reset"]{padding:2px 10px;font-size:1.0em;line-height:100%;}
+.NL_Title{color:#444;vertical-align:middle;text-align:center}
+.NL_Msg{color:#444;padding:2px;font-weight:normal;font-size:1.4em;text-align:left;width:7em}
+.NL_Body{color:#000;padding:2px; font-size:1.4em;text-align:left}
+.note{font-size:11px;text-align:right}
+
+
+.div_tbl{border:1px solid #ccc;}
+.div_tbl .col{float:left;text-align:left;}
+.div_tbl .empty,
+.div_tbl .msg{width:120px;height:2.4em;font-size:1.4em;line-height:180%;}
+.div_tbl .ctrl{width:360px;height:2.4em;font-size:1.4em;line-height:180%;}
+.div_tbl .ctrl INPUT[type="text"],
+.div_tbl .ctrl INPUT[type="submit"],
+.div_tbl .ctrl SELECT {width:180px}
+.div_tbl .ctrl span{margin-left:10px}
+
+/*footer*/
+.footer{margin:20px auto;color:#666;}
+
+/*for mobile*/
+.for_desktop{}
+.for_mobile,
+.for_mobible_span{display:none}
+@media screen and (max-width: 992px)
+{
+    .for_desktop{display:none;}
+    .for_mobile{display:block}
+    .for_mobible_span{display:inline}
+
+    h1{font-size:1.4em}
+
+    /*lang*/
+    .full_top #lang{width:100%;}
+    .full_top #lang .last{padding-right:15px;}
+
+    /*head menu*/
+    #bt{width:100%}
+    #head{width:100%;height:4.5em;}
+    #head_l{width:5em;height:4.5em}
+    #head_r{margin-left:5.5em;height:4.5em}
+    #head_logo{margin-left:1em}
+    #head_logo IMG{max-width:95%;height:auto}
+    #head_title{margin:0px 0px 0px 0px;}
+    #head_r #head_title{padding:0px 4em 0px 0px}
+    #head_r .title{padding:0.5em 0px 0px 0px;text-align:center;font-size:1.6em}
+    .bmi_desc{margin:20px 10px;font-size:1.2em;line-height:160%;color:#555;text-align:left}
+
+
+    /*bmi form*/
+    .my_bmi{margin:10px}
+    .my_bmi_ipt{float:none;width:100%;margin:10px auto;}
+    .my_bmi_def{float:none;width:100%}
+    .my_bmi_def h2{text-align:left;padding-left:0px}
+    .bmi_history_img{max-width:95%;HEIGHT:auto;}
+
+    .div_tbl{width:100%}
+    .div_tbl .col{float:none}
+    .div_tbl .msg{width:100%;font-size:1.4em;line-height:100%;height:1.4em;margin:1em 0em 0.5em 0em;}
+    .div_tbl .ctrl{width:100%;font-size:1.4em;line-height:100%;}
+    .div_tbl .ctrl INPUT[type="radio"]{margin-top:0.4em}
+    .div_tbl .ctrl INPUT[type="text"]{width:99%;border:0px;outline: 0px;padding:0px;}
+    .div_tbl .ctrl INPUT[type="submit"]{width:99%;}
+    .div_tbl .ctrl SELECT {width:99%;padding:0px;}
+    .div_tbl .first{}
+    .div_tbl .empty{height:0px}
+    .div_tbl .box{height:2em;width:99%;border:1px solid #999;background:#eff8ff;padding:2px;overflow:hidden}
+
+
+    /*history*/
+    .my_history{margin:10px}
+    #bmi_history_js{width:100%;height:400px}
+
+    /*my link*/
+    #link_1{margin:10px}
+}
+
+@media (min-width:728px) and (max-width: 992px)
+{
+    .ad_top_wrapper{width:auto; height: 200px;}
+    .ad_top{width: 728px;height:90px;margin:0px auto;float:none}
+    .ad_fch{width:728px;height:90px;margin:10px auto;float:none;background: url(http://bibipipi.com/futaobao728.png) center left no-repeat}
+
+    #bmi_history_js{width:100%;height:320px}
+}
+@media (min-width:468px) and (max-width: 728px)
+{
+    .ad_top_wrapper{width:auto; height: 140px;margin:0px auto;}
+    .ad_top{width: 468px; height: 60px;margin: 0px auto;float:none}
+    .ad_fch{width: 468px; height: 60px;margin:10px auto;float:none;background: url(http://bibipipi.com/futaobao468.png) center left no-repeat}
+    #bmi_history_js{width:100%;height:300px}
+}
+@media (max-width: 467px)
+{
+    .ad_top_wrapper{width:auto; height: 140px;}
+    .ad_top{width: 234px; height:60px;margin:0px auto;float:none}
+    .ad_fch{width: 234px; height:60px;margin:10px auto;float:none;background: url(http://bibipipi.com/futaobao234.png) center left no-repeat}
+    #bmi_history_js{width:100%;height:280px}
+}
+.label1{
+    cursor: default;
+}
