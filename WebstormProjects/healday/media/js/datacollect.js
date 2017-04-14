@@ -75,7 +75,7 @@ function initBodyChart() {
             {
                 name:'步数',
                 type:'line',
-                data:[5000, 3300, 7000, 12000, 600, 2000, 10],
+                data:[2000, 3300, 3400, 6000, 600, 2000, 15000],
                 markPoint: {
                     data: [
                         {type: 'max', name: '最大值'},
