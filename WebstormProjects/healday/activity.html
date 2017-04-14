@@ -547,7 +547,8 @@
 
                                 <div class="span2 portfolio-btn">
 
-                                    <a href="#" class="btn bigicn-only"><span>加入</span></a>
+                                    <a href="#" class="btn bigicn-only joinac"><span>加入</span></a>
+                                    <a href="#" class="btn bigicn-only exitac"><span>退出</span></a>
                                     <!--<a href="#" class="btn btn-danger"><span>加入</span></a>-->
 
 
@@ -1098,6 +1099,8 @@ _gaq.push(['_trackPageview']);
 
 <script>
     var actilist = document.querySelectorAll('.row-fluid.portfolio-block');
+    var exitlist=document.querySelector('.exitac');
+    var join=document.querySelector('.joinac');
 
     window.onload = function () {
         $(actilist[1]).show();
@@ -1107,7 +1110,7 @@ _gaq.push(['_trackPageview']);
         $(actilist[5]).hide();
         $(actilist[6]).hide();
         $(actilist[7]).hide();
-
+        $(exitlist).hide();
     };
 
     $(".active").on("click", function () {
@@ -1140,6 +1143,16 @@ _gaq.push(['_trackPageview']);
         $(actilist[5]).hide();
         $(actilist[6]).hide();
         $(actilist[7]).hide();
+    });
+
+    $(".joinac").on("click", function () {
+        $(join).hide();
+        $(exitlist).show();
+    });
+
+    $(".exitac").on("click", function () {
+        $(join).show();
+        $(exitlist).hide();
     });
 </script>
 </body>
