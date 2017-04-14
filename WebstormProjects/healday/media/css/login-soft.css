@@ -40,12 +40,12 @@ Login page
   color: #eee;
 }
 .login .content h4  {
-  color: #eee;
+  color: black;
 }
 
 .login .content p,
 .login .content label {
-  color: #fff;
+  color: black;
 }
 
 .login .content .login-form,
